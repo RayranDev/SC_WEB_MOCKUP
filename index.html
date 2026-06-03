@@ -3,72 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sunshine Coffee - Un sueño servido en taza, directo a Bosa.">
-    <title>Sunshine Coffee | Un sueño servido en taza</title>
+    <meta name="description" content="Sunshine Coffee - Un sueño servido en taza, directo a tu puerta en Bosa. Disfruta del mejor café caliente, frío y nevados de autor.">
+    <title>Sunshine Coffee | Café de Autor en Bosa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Grain texture overlay -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo-link">
-                <img src="./assets/sunshine_coffee_logo_1780492617338.png" alt="Sunshine Coffee Logo" class="logo">
-                <span class="logo-text">Sunshine Coffee</span>
+                <img src="./assets/sunshine_coffee_logo_1780492617338.png" alt="Sunshine Coffee Logo" class="logo animate-pulse">
+                <span class="logo-text">Sunshine <span class="accent-text">Coffee</span></span>
             </a>
             <div class="nav-links">
-                <a href="#menu" class="nav-link">Menú</a>
                 <a href="#historia" class="nav-link">Nuestra Historia</a>
-                <a href="#pedido" class="btn btn-primary btn-small">Pedir Domicilio</a>
+                <a href="#menu" class="nav-link">Menú</a>
+                <a href="#migao" class="nav-link">El Migao</a>
+                <a href="https://www.instagram.com/sunshinecoffee11/" target="_blank" class="nav-icon-link" aria-label="Instagram">
+                    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="#pedido" class="btn btn-primary btn-small">Pedir Ahora</a>
             </div>
+            <button class="mobile-nav-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Sección 1: El Amanecer (Hero Section) -->
-    <header class="hero">
-        <div class="hero-bg">
-            <img src="./assets/sunshine_coffee_hero_1780492635363.png" alt="Sunshine Coffee Cart">
-            <div class="hero-overlay"></div>
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-links">
+            <a href="#historia" class="mobile-link">Nuestra Historia</a>
+            <a href="#menu" class="mobile-link">Menú</a>
+            <a href="#migao" class="mobile-link">El Migao</a>
+            <a href="https://www.instagram.com/sunshinecoffee11/" target="_blank" class="mobile-link instagram-mobile">
+                <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                @sunshinecoffee11
+            </a>
+            <a href="#pedido" class="btn btn-primary btn-large">Pedir Domicilio</a>
         </div>
-        <div class="container hero-content">
-            <h1 class="hero-title">El sol apenas está saliendo 🌅<br>Elige tu momento Sunshine.</h1>
-            <p class="hero-subtitle">Café caliente, frío o un nevado delicioso directo a tu puerta en Bosa. De manos jóvenes que le ponen corazón a cada taza.</p>
-            <div class="hero-buttons">
-                <a href="https://wa.me/573000000000?text=¡Hola%20Angie%20y%20Greyssi!%20Vi%20su%20página%20web%20y%20quiero%20armar%20mi%20momento%20Sunshine%20con%20un%20café..." target="_blank" class="btn btn-primary btn-large shadow-glow">📦 Pedir Domicilio (WhatsApp)</a>
-                <a href="#menu" class="btn btn-outline btn-large">📋 Ver Menú</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-steam">
+            <div class="steam-bubble bubble-1"></div>
+            <div class="steam-bubble bubble-2"></div>
+            <div class="steam-bubble bubble-3"></div>
+        </div>
+        <div class="container hero-grid">
+            <div class="hero-content reveal">
+                <span class="hero-tagline">☕ Hecho con amor desde el corazón de Bosa</span>
+                <h1 class="hero-title">El sol apenas está saliendo 🌅 <br><span class="highlight">Elige tu momento Sunshine.</span></h1>
+                <p class="hero-subtitle">Café caliente, frío o un nevado delicioso directo a tu puerta en Bosa. De manos jóvenes que le ponen corazón a cada taza.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573022338027?text=¡Hola%20Angie%20y%20Greyssi!%20Vi%20su%20página%20web%20y%20quiero%20armar%20mi%20momento%20Sunshine%20con%20un%20café..." target="_blank" class="btn btn-primary btn-large shadow-glow-yellow bounce-hover">
+                        <span>📦 Pedir por WhatsApp</span>
+                    </a>
+                    <a href="#menu" class="btn btn-outline btn-large">📋 Ver Menú</a>
+                </div>
+            </div>
+            <div class="hero-image-gallery reveal delay-2">
+                <div class="gallery-wrapper">
+                    <img src="./assets/media__1780509604001.jpg" alt="Bosa ya estamos aquí - Sunshine Coffee" class="gallery-img main-img">
+                    <div class="floating-badge">
+                        <span class="badge-icon">🚚</span>
+                        <div class="badge-text">
+                            <strong>¡Llegamos a Bosa!</strong>
+                            <p>Servicio a domicilio</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Sección 2: Nuestra Historia -->
     <section id="historia" class="story-section">
-        <div class="container story-container">
-            <div class="story-image-wrapper">
-                <img src="./assets/sunshine_coffee_story_1780492647991.png" alt="Angie y Greyssi preparando café" class="story-image">
+        <div class="container story-grid">
+            <div class="story-image-container reveal">
+                <div class="story-frame">
+                    <img src="./assets/media__1780509593580.png" alt="Angie y Greyssi - Café de la Esquina" class="story-img">
+                </div>
+                <div class="story-sub-img">
+                    <img src="./assets/media__1780509880704.jpg" alt="Greyssi en Sunshine Coffee Stand" class="story-stand-img">
+                </div>
             </div>
-            <div class="story-text">
-                <h2 class="section-title">De cuidar vidas a servir sonrisas.</h2>
-                <h3 class="section-subtitle">Manos con sabor a sueños</h3>
-                <p>Somos <strong>Angie y Greyssi</strong>. Sunshine Coffee nace como un sueño servido en taza por dos jóvenes que decidieron emprender con ilusión y esfuerzo.</p>
-                <p>Greyssi —enfermera, estudiante y mujer valiente— plasma su corazón en este proyecto. No es solo un café rico; es el reflejo de un corazón que nunca deja de trabajar por lo que ama.</p>
+            <div class="story-text-container reveal delay-2">
+                <span class="section-tag">Nuestra Historia</span>
+                <h2 class="section-title">De cuidar vidas a servir sonrisas</h2>
+                <h3 class="story-subtitle-emotiva">"Manos con sabor a sueños"</h3>
+                <p class="story-desc">Somos <strong>Angie y Greyssi</strong>. Sunshine Coffee nace como un sueño servido en taza por dos jóvenes que decidieron emprender con ilusión y esfuerzo.</p>
+                <p class="story-desc highlight-p">Greyssi —enfermera, estudiante y mujer valiente— plasma su corazón en este proyecto. No es solo un café rico; es el reflejo de un corazón que nunca deja de trabajar por lo que ama.</p>
+                <div class="story-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✨</span>
+                        <div class="feature-text">
+                            <h4>Ingredientes con amor</h4>
+                            <p>Seleccionamos los mejores granos para alegrar tu día.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">👩‍🍳</span>
+                        <div class="feature-text">
+                            <h4>Preparación artesanal</h4>
+                            <p>Cada taza es una obra de arte diseñada para ti.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Especial: MIGAO -->
-    <section class="special-section">
-        <div class="container special-container">
-            <div class="special-content">
-                <span class="badge">NUEVO</span>
-                <h2 class="special-title">El "MIGAO"</h2>
-                <p class="special-desc">Chocolate caliente cremoso + galletas Ducales + almohábana + queso doble crema.</p>
-                <p class="special-question">¿Te atreves a probarlo? 🤪</p>
-                <a href="#pedido" class="btn btn-primary">¡Lo quiero!</a>
+    <section id="migao" class="special-section">
+        <div class="container special-grid">
+            <div class="special-content reveal">
+                <span class="badge-special">⭐ Especial de la Casa</span>
+                <h2 class="special-title">El Famoso "MIGAO"</h2>
+                <p class="special-desc">Una combinación tradicional y deliciosa que abraza tu alma:</p>
+                <ul class="special-list">
+                    <li><span class="check-icon">🍫</span> Chocolate caliente espeso y cremoso</li>
+                    <li><span class="check-icon">🍪</span> Galletas Ducales crujientes</li>
+                    <li><span class="check-icon">🥐</span> Almojábana tradicional calientita</li>
+                    <li><span class="check-icon">🧀</span> Queso doble crema derretido y estirable</li>
+                </ul>
+                <div class="interactive-prompt">
+                    <p class="prompt-text">¿Te atreves a probarlo? 🤪</p>
+                    <a href="https://wa.me/573022338027?text=¡Hola%20Angie%20y%20Greyssi!%20Quiero%20atreverme%20a%20probar%20el%20delicioso%20MIGAO...%20%F0%9F%A4%AA" target="_blank" class="btn btn-primary btn-large shadow-glow-yellow bounce-hover">¡Quiero mi Migao ya!</a>
+                </div>
             </div>
-            <div class="special-image-wrapper">
-                <img src="./assets/sunshine_coffee_migao_1780492660343.png" alt="Migao - Chocolate con almojábana y queso" class="special-image">
+            <div class="special-image-container reveal delay-2">
+                <div class="blob-wrapper">
+                    <img src="./assets/sunshine_coffee_migao_1780492660343.png" alt="Delicioso Migao con Chocolate y queso" class="migao-img">
+                </div>
             </div>
         </div>
     </section>
@@ -76,61 +156,62 @@
     <!-- Sección 3: El Menú Interactivo -->
     <section id="menu" class="menu-section">
         <div class="container">
-            <div class="section-header center">
-                <h2 class="section-title">El Menú</h2>
-                <p class="section-subtitle">Adiós a las complicaciones. Encuentra tu antojo.</p>
+            <div class="section-header center reveal">
+                <span class="section-tag">El Menú Sunshine</span>
+                <h2 class="section-title">Elige tu Antojo</h2>
+                <p class="section-subtitle">Preparados al instante con el mejor café y chocolate.</p>
             </div>
 
-            <div class="menu-tabs">
-                <button class="menu-tab active" data-target="calientes">☕ Cafés Calientes</button>
-                <button class="menu-tab" data-target="frios">🧊 Cafés Fríos</button>
-                <button class="menu-tab" data-target="nevados">🍧 Nevados</button>
+            <div class="menu-tabs-container reveal">
+                <div class="menu-tabs">
+                    <button class="menu-tab active" data-target="calientes">☕ Calientes</button>
+                    <button class="menu-tab" data-target="frios">🧊 Fríos</button>
+                    <button class="menu-tab" data-target="nevados">🍧 Nevados</button>
+                </div>
             </div>
 
-            <div class="menu-content">
+            <div class="menu-content-wrapper reveal">
                 <!-- Calientes -->
                 <div id="calientes" class="menu-category active">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Campesino</h4>
-                            <div class="dots"></div>
-                            <span class="price">$3.000</span>
+                            <span class="item-title">Campesino</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$3.000</span>
                         </div>
+                        <p class="item-desc">El clásico reconfortante de la abuela con panela.</p>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Café</h4>
-                            <div class="dots"></div>
-                            <span class="price">$9.000</span>
+                            <span class="item-title">Mocachino</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$4.000</span>
                         </div>
+                        <p class="item-desc">Café espresso, leche vaporizada y jarabe de chocolate fino.</p>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Mocachino</h4>
-                            <div class="dots"></div>
-                            <span class="price">$4.000</span>
+                            <span class="item-title">Cappuccino</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$4.000</span>
                         </div>
+                        <p class="item-desc">Equilibrio perfecto de espresso, leche y espuma cremosa.</p>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Cappuccino</h4>
-                            <div class="dots"></div>
-                            <span class="price">$4.000</span>
+                            <span class="item-title">Americano</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$2.500</span>
                         </div>
+                        <p class="item-desc">Espresso doble rebajado con agua caliente para el sabor puro.</p>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Americano</h4>
-                            <div class="dots"></div>
-                            <span class="price">$2.500</span>
+                            <span class="item-title">Café Latte</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$4.000</span>
                         </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="menu-item-info">
-                            <h4>Café Latte</h4>
-                            <div class="dots"></div>
-                            <span class="price">$4.000</span>
-                        </div>
+                        <p class="item-desc">Espresso suave con abundante leche vaporizada sedosa.</p>
                     </div>
                 </div>
 
@@ -138,24 +219,35 @@
                 <div id="frios" class="menu-category">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Spanish Latte</h4>
-                            <div class="dots"></div>
-                            <span class="price">$8.000</span>
+                            <span class="item-title">Spanish Latte</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$8.000</span>
                         </div>
+                        <p class="item-desc">Latte endulzado con un toque delicioso de leche condensada.</p>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Caramelo Macchiato</h4>
-                            <div class="dots"></div>
-                            <span class="price">$8.000</span>
+                            <span class="item-title">Caramelo Macchiato</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$8.000</span>
                         </div>
+                        <p class="item-desc">Café helado con capas de vainilla, leche, espresso y caramelo.</p>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Mocca Chocolate</h4>
-                            <div class="dots"></div>
-                            <span class="price">$8.000</span>
+                            <span class="item-title">Mocca Chocolate</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$8.000</span>
                         </div>
+                        <p class="item-desc">La mezcla ideal de espresso, chocolate espeso y hielo.</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <span class="item-title">Bailys Latte</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$10.000</span>
+                        </div>
+                        <p class="item-desc">Un toque festivo y cremoso de crema irlandesa con espresso y hielo.</p>
                     </div>
                 </div>
 
@@ -163,98 +255,418 @@
                 <div id="nevados" class="menu-category">
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Mocca</h4>
-                            <div class="dots"></div>
-                            <span class="price">$9.000</span>
+                            <span class="item-title">Café</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$9.000</span>
                         </div>
+                        <p class="item-desc">Frappé de café súper refrescante y coronado con crema batida.</p>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Baylis</h4>
-                            <div class="dots"></div>
-                            <span class="price">$10.000</span>
+                            <span class="item-title">Mocca</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$9.000</span>
                         </div>
+                        <p class="item-desc">Frappé de café y chocolate con jarabe y chispas.</p>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-info">
-                            <h4>Bailys Latte</h4>
-                            <div class="dots"></div>
-                            <span class="price">$10.000</span>
+                            <span class="item-title">Baylis</span>
+                            <span class="dots"></span>
+                            <span class="item-price">$10.000</span>
                         </div>
+                        <p class="item-desc">El nevado premium de crema irlandesa, el favorito de muchos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-image-prompt center reveal">
+                <button class="btn btn-outline-dark" id="btn-open-menu-image">🖼️ Ver carta física original</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para Carta Física -->
+    <div class="menu-modal" id="menu-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h3>Nuestra Carta</h3>
+            <img src="./assets/media__1780509889390.png" alt="Carta física original de Sunshine Coffee" class="modal-img">
+        </div>
+    </div>
+
+    <!-- Sección 4: Tu Momento Perfecto -->
+    <section class="moment-section">
+        <div class="container moment-grid">
+            <div class="moment-image-wrapper reveal">
+                <img src="./assets/media__1780509629301.jpg" alt="Café Sunshine al lado de computadora" class="moment-img">
+            </div>
+            <div class="moment-content reveal delay-2">
+                <span class="section-tag">El Momento</span>
+                <h2 class="section-title">Tu Compañía Ideal</h2>
+                <p class="moment-intro-text">Sabemos que cada hora del día tiene su propio sabor. Queremos acompañarte en cada una de ellas.</p>
+                <div class="moment-interactive-card">
+                    <div class="moment-header">
+                        <div class="live-indicator">
+                            <span class="dot"></span>
+                            <span class="live-text">Hora de tu visita</span>
+                        </div>
+                        <span id="moment-clock" class="moment-clock">00:00:00</span>
+                    </div>
+                    <div class="moment-body">
+                        <h3 id="moment-time-title">Calculando...</h3>
+                        <p id="moment-message">Tu momento Sunshine te espera.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección 4: Tu Momento Perfecto -->
-    <section class="moment-section">
-        <div class="container center">
-            <h2 class="section-title">Tu Momento Perfecto</h2>
-            <div class="moment-card">
-                <div class="moment-icon">🕒</div>
-                <h3 id="moment-time">Calculando la hora perfecta...</h3>
-                <p id="moment-message" class="moment-message">El café sabe mejor en cualquier momento.</p>
+    <!-- Sección de Redes Sociales (Instagram Grid) -->
+    <section class="instagram-feed-section">
+        <div class="container">
+            <div class="section-header center reveal">
+                <span class="section-tag">Síguenos en Instagram</span>
+                <h2 class="section-title">@sunshinecoffee11</h2>
+                <p class="section-subtitle">Únete a nuestra comunidad y comparte tu #MomentoSunshine</p>
+                <a href="https://www.instagram.com/sunshinecoffee11/" target="_blank" class="btn btn-outline-dark btn-small instagram-btn">
+                    <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    Seguir en Instagram
+                </a>
+            </div>
+
+            <div class="instagram-grid reveal">
+                <div class="insta-post">
+                    <img src="./assets/media__1780509604001.jpg" alt="Publicación Instagram 1">
+                    <div class="insta-overlay">
+                        <span>❤️ 48</span>
+                        <span>💬 5</span>
+                    </div>
+                </div>
+                <div class="insta-post">
+                    <img src="./assets/media__1780509593580.png" alt="Publicación Instagram 2">
+                    <div class="insta-overlay">
+                        <span>❤️ 62</span>
+                        <span>💬 8</span>
+                    </div>
+                </div>
+                <div class="insta-post">
+                    <img src="./assets/media__1780509629301.jpg" alt="Publicación Instagram 3">
+                    <div class="insta-overlay">
+                        <span>❤️ 55</span>
+                        <span>💬 4</span>
+                    </div>
+                </div>
+                <div class="insta-post">
+                    <img src="./assets/media__1780509880704.jpg" alt="Publicación Instagram 4">
+                    <div class="insta-overlay">
+                        <span>❤️ 71</span>
+                        <span>💬 12</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Sección 5: ¡Pídelo ya! -->
     <section id="pedido" class="cta-section">
-        <div class="container center cta-container">
-            <div class="delivery-badge">¡LLEGÓ A BOSA! ☕️🚚</div>
-            <h2 class="section-title">Arma tu momento Sunshine</h2>
-            <p class="cta-schedule"><strong>Horarios:</strong> Domicilios de 8:00 am a 2:00 pm</p>
-            <a href="https://wa.me/573000000000?text=¡Hola%20Angie%20y%20Greyssi!%20Vi%20su%20página%20web%20y%20quiero%20armar%20mi%20momento%20Sunshine%20con%20un%20café..." target="_blank" class="btn btn-whatsapp btn-massive">
-                <span class="wa-icon">📱</span> Enviar mi pedido por WhatsApp
+        <div class="cta-sunburst" aria-hidden="true"></div>
+        <div class="container center cta-container reveal">
+            <div class="delivery-badge animate-bounce-slow">¡LLEGÓ A BOSA! 🚚☕</div>
+            <h2 class="cta-title">¿Listo para alegrar tu día?</h2>
+            <p class="cta-subtitle">Disfruta de nuestros cafés y especiales hechos en el instante.</p>
+            <div class="cta-details">
+                <div class="cta-detail">
+                    <span class="cta-icon">🕒</span>
+                    <div>
+                        <strong>Horarios de Domicilio</strong>
+                        <p>Lunes a Domingo: 8:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                <div class="cta-detail">
+                    <span class="cta-icon">📍</span>
+                    <div>
+                        <strong>Zona de Cobertura</strong>
+                        <p>Bosa y alrededores cercanos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://wa.me/573022338027?text=¡Hola%20Angie%20y%20Greyssi!%20Vi%20su%20página%20web%20y%20quiero%20armar%20mi%20momento%20Sunshine%20con%20un%20café..." target="_blank" class="btn btn-whatsapp btn-massive pulse-animation">
+                <svg class="wa-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12c0 2.17.7 4.19 1.9 5.86L2.5 22l4.31-1.34C8.42 21.41 10.15 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.65 14.28c-.2.56-1.01 1.05-1.57 1.12-.47.06-.98.08-1.59-.12-.39-.13-1-.38-2.18-.89-2.07-.88-3.41-3-3.51-3.14-.1-.13-.82-1.09-.82-2.08 0-.99.51-1.48.71-1.69.2-.2.43-.25.57-.25.13 0 .27.01.39.01.12.01.28-.05.44.33.17.41.57 1.39.62 1.49.05.1.08.22.01.35-.07.13-.15.22-.25.33-.1.11-.2.23-.29.33-.1.1-.21.21-.09.42.12.21.52.86 1.11 1.39.77.68 1.41.89 1.61.99.2.1.32.08.44-.06.12-.14.52-.61.66-.82.14-.2.28-.17.47-.1.19.07 1.22.58 1.43.68.21.1.35.15.4.24.05.09.05.53-.15 1.09z"/>
+                </svg>
+                <span>Enviar mi pedido por WhatsApp</span>
             </a>
         </div>
     </section>
 
+    <!-- Floating Action Button -->
+    <a href="https://wa.me/573022338027?text=¡Hola%20Angie%20y%20Greyssi!%20Vi%20su%20página%20web%20y%20quiero%20armar%20mi%20momento%20Sunshine%20con%20un%20café..." class="floating-whatsapp" target="_blank" aria-label="Escribir por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 2.17.7 4.19 1.9 5.86L2.5 22l4.31-1.34C8.42 21.41 10.15 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.65 14.28c-.2.56-1.01 1.05-1.57 1.12-.47.06-.98.08-1.59-.12-.39-.13-1-.38-2.18-.89-2.07-.88-3.41-3-3.51-3.14-.1-.13-.82-1.09-.82-2.08 0-.99.51-1.48.71-1.69.2-.2.43-.25.57-.25.13 0 .27.01.39.01.12.01.28-.05.44.33.17.41.57 1.39.62 1.49.05.1.08.22.01.35-.07.13-.15.22-.25.33-.1.11-.2.23-.29.33-.1.1-.21.21-.09.42.12.21.52.86 1.11 1.39.77.68 1.41.89 1.61.99.2.1.32.08.44-.06.12-.14.52-.61.66-.82.14-.2.28-.17.47-.1.19.07 1.22.58 1.43.68.21.1.35.15.4.24.05.09.05.53-.15 1.09z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container center">
-            <img src="./assets/sunshine_coffee_logo_1780492617338.png" alt="Sunshine Coffee" class="footer-logo">
-            <p>© 2026 Sunshine Coffee. Un sueño servido en taza.</p>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="#" class="logo-link">
+                    <img src="./assets/sunshine_coffee_logo_1780492617338.png" alt="Sunshine Coffee Logo" class="logo">
+                    <span class="logo-text">Sunshine <span class="accent-text">Coffee</span></span>
+                </a>
+                <p class="footer-desc">El sol de cada mañana servido en tu taza. Emprendimiento boseño dedicado a darte la mejor energía con café y chocolate artesanal.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/sunshinecoffee11/" target="_blank" aria-label="Instagram">
+                        <svg class="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Navegación</h4>
+                <ul class="footer-nav">
+                    <li><a href="#historia">Nuestra Historia</a></li>
+                    <li><a href="#menu">El Menú</a></li>
+                    <li><a href="#migao">El Migao</a></li>
+                    <li><a href="#pedido">Hacer Pedido</a></li>
+                </ul>
+            </div>
+            <div class="footer-contacts-col">
+                <h4>Contacto</h4>
+                <p>📍 Bosa, Bogotá D.C.</p>
+                <p>📱 +57 302 233 8027</p>
+                <p>💬 Domicilios: 8:00 AM - 2:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom center">
+            <p>&copy; 2026 Sunshine Coffee. Un sueño servido en taza por Angie & Greyssi. Hecho con ❤️ para Bosa.</p>
         </div>
     </footer>
 
     <script>
-        // Menu Tabs Logic
+        // =============================================
+        // MENU TABS
+        // =============================================
         const tabs = document.querySelectorAll('.menu-tab');
         const categories = document.querySelectorAll('.menu-category');
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // Remove active class from all tabs and categories
                 tabs.forEach(t => t.classList.remove('active'));
                 categories.forEach(c => c.classList.remove('active'));
-
-                // Add active class to clicked tab and corresponding category
                 tab.classList.add('active');
-                const targetId = tab.getAttribute('data-target');
-                document.getElementById(targetId).classList.add('active');
+                document.getElementById(tab.getAttribute('data-target')).classList.add('active');
             });
         });
 
-        // Dynamic Moment Logic
-        const setMomentMessage = () => {
-            const hour = new Date().getHours();
-            const timeEl = document.getElementById('moment-time');
+        // =============================================
+        // MODAL: CARTA FÍSICA
+        // =============================================
+        const modal = document.getElementById('menu-modal');
+        const btnOpen = document.getElementById('btn-open-menu-image');
+        const btnClose = document.getElementById('modal-close');
+
+        btnOpen.addEventListener('click', () => {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeModalFunc = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        btnClose.addEventListener('click', closeModalFunc);
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModalFunc(); });
+
+        // =============================================
+        // MOBILE MENU
+        // =============================================
+        const mobileToggle = document.querySelector('.mobile-nav-toggle');
+        const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileOverlay.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // =============================================
+        // SCROLL REVEAL (Intersection Observer)
+        // =============================================
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealElements.forEach(el => revealOnScroll.observe(el));
+
+        // =============================================
+        // LIVE CLOCK & MOMENT MESSAGE
+        // =============================================
+        const formatTime = (date) => {
+            return [date.getHours(), date.getMinutes(), date.getSeconds()]
+                .map(n => String(n).padStart(2, '0')).join(':');
+        };
+
+        const updateClockAndMessage = () => {
+            const now = new Date();
+            const clockEl = document.getElementById('moment-clock');
+            if (clockEl) clockEl.innerText = formatTime(now);
+
+            const hour = now.getHours();
+            const titleEl = document.getElementById('moment-time-title');
             const msgEl = document.getElementById('moment-message');
 
             if (hour >= 6 && hour < 12) {
-                timeEl.innerText = "¡Buenos días!";
-                msgEl.innerText = "El secreto para arrancar el día con energía... es tu Sunshine Coffee.";
+                titleEl.innerText = '🌅 Mañanitas Sunshine';
+                msgEl.innerText = '¡El secreto para arrancar el día con la mejor energía es un Sunshine Coffee bien caliente!';
             } else if (hour >= 12 && hour < 15) {
-                timeEl.innerText = "Después del Almuerzo";
-                msgEl.innerText = "La pausa perfecta tiene nombre: café frío con chocolate y caramelo.";
+                titleEl.innerText = '☀️ Tarde de Relax';
+                msgEl.innerText = 'La pausa perfecta después del almuerzo tiene nombre: un café helado bien dulce y refrescante.';
             } else {
-                timeEl.innerText = "La Tarde";
-                msgEl.innerText = "El café de la tarde sabe mejor cuando lo disfrutas con un waffle.";
+                titleEl.innerText = '🌙 El Antojo de la Tarde';
+                msgEl.innerText = 'El café de la tarde/noche sabe mejor cuando lo acompañas con algo dulce y un waffle bien crujiente.';
             }
         };
 
-        setMomentMessage();
+        setInterval(updateClockAndMessage, 1000);
+        updateClockAndMessage();
+
+        // =============================================
+        // SCROLL PROGRESS BAR + NAVBAR SHRINK
+        // =============================================
+        const scrollProgress = document.querySelector('.scroll-progress');
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollProgress && docHeight > 0) {
+                scrollProgress.style.width = `${(scrollTop / docHeight) * 100}%`;
+            }
+            navbar.classList.toggle('scrolled', scrollTop > 80);
+        }, { passive: true });
+
+        // =============================================
+        // FLOATING COFFEE PARTICLES (Hero)
+        // =============================================
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            const particlesEl = document.createElement('div');
+            particlesEl.className = 'coffee-particles';
+            hero.appendChild(particlesEl);
+
+            for (let i = 0; i < 18; i++) {
+                const p = document.createElement('div');
+                p.className = 'coffee-particle';
+                const size = Math.random() * 7 + 6;
+                p.style.cssText = `
+                    left: ${Math.random() * 100}%;
+                    width: ${size}px;
+                    height: ${(size * 1.45).toFixed(1)}px;
+                    animation-duration: ${(Math.random() * 14 + 12).toFixed(1)}s;
+                    animation-delay: -${(Math.random() * 14).toFixed(1)}s;
+                `;
+                particlesEl.appendChild(p);
+            }
+        }
+
+        // =============================================
+        // MIGAO SPARKLES
+        // =============================================
+        const specialSection = document.querySelector('.special-section');
+        if (specialSection) {
+            const sparklesEl = document.createElement('div');
+            sparklesEl.className = 'sparkles-container';
+            specialSection.appendChild(sparklesEl);
+
+            for (let i = 0; i < 30; i++) {
+                const s = document.createElement('div');
+                s.className = 'sparkle-dot';
+                const size = Math.random() * 5 + 3;
+                s.style.cssText = `
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    width: ${size.toFixed(1)}px;
+                    height: ${size.toFixed(1)}px;
+                    animation-duration: ${(Math.random() * 3.5 + 2).toFixed(1)}s;
+                    animation-delay: -${(Math.random() * 4).toFixed(1)}s;
+                `;
+                sparklesEl.appendChild(s);
+            }
+        }
+
+        // =============================================
+        // 3D TILT — HERO IMAGE
+        // =============================================
+        const galleryWrapper = document.querySelector('.gallery-wrapper');
+        const galleryImg = document.querySelector('.gallery-img');
+
+        if (galleryWrapper && galleryImg) {
+            let animFrame;
+            galleryWrapper.addEventListener('mousemove', (e) => {
+                cancelAnimationFrame(animFrame);
+                animFrame = requestAnimationFrame(() => {
+                    const rect = galleryWrapper.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width  - 0.5) * 18;
+                    const y = ((e.clientY - rect.top)  / rect.height - 0.5) * -18;
+                    galleryImg.style.transition = 'none';
+                    galleryImg.style.transform = `perspective(900px) rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
+                });
+            });
+            galleryWrapper.addEventListener('mouseleave', () => {
+                cancelAnimationFrame(animFrame);
+                galleryImg.style.transition = 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
+                galleryImg.style.transform = 'rotate(2deg)';
+            });
+        }
+
+        // =============================================
+        // INSTAGRAM CONTADOR ANIMADO
+        // =============================================
+        document.querySelectorAll('.insta-post').forEach(post => {
+            post.querySelectorAll('.insta-overlay span').forEach(span => {
+                const match = span.textContent.match(/\d+/);
+                if (match) span.dataset.target = match[0];
+            });
+        });
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.querySelectorAll('.insta-overlay span[data-target]').forEach(span => {
+                    const target = parseInt(span.dataset.target, 10);
+                    const isHeart = span.textContent.includes('❤️');
+                    let current = 0;
+                    const steps = Math.ceil(1200 / 16);
+                    const increment = target / steps;
+                    const tick = () => {
+                        current = Math.min(current + increment, target);
+                        span.textContent = `${isHeart ? '❤️' : '💬'} ${Math.round(current)}`;
+                        if (current < target) requestAnimationFrame(tick);
+                    };
+                    requestAnimationFrame(tick);
+                });
+                counterObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.insta-post').forEach(post => counterObserver.observe(post));
     </script>
 </body>
 </html>

@@ -1441,6 +1441,147 @@ img {
     50% { background-position: 100% 50%; }
 }
 
+/* --- Logo: Nuevo formato cuadrado con marca --- */
+.logo {
+    height: 56px;
+    width: 56px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: none;
+    box-shadow: 0 2px 12px rgba(47, 31, 23, 0.15);
+}
+
+/* --- Brand Strip de Servicios --- */
+.brand-strip {
+    background-color: var(--color-coffee-dark);
+    padding: 52px 0 44px;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-strip::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-sunshine), var(--color-sunshine-hover), transparent);
+}
+
+.brand-strip::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-sunshine), var(--color-sunshine-hover), transparent);
+}
+
+.brand-strip-tagline {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-sunshine);
+    opacity: 0.85;
+    margin-bottom: 36px;
+    letter-spacing: 0.04em;
+}
+
+.brand-strip-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+.strip-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-cream-dark);
+    transition: color 0.25s ease, transform 0.25s ease;
+    padding: 0 44px;
+    cursor: default;
+}
+
+.strip-item:hover {
+    color: var(--color-sunshine);
+    transform: translateY(-5px);
+}
+
+.strip-divider {
+    width: 1px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.12);
+    flex-shrink: 0;
+}
+
+.strip-icon {
+    width: 44px;
+    height: 44px;
+}
+
+.strip-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.strip-item span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: inherit;
+}
+
+/* --- Footer: Frase de marca --- */
+.footer-brand-phrase {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--color-sunshine) !important;
+    opacity: 0.9;
+    margin-top: -8px;
+    margin-bottom: 20px;
+}
+
+/* --- Modal: Carta en formato retrato --- */
+.modal-img {
+    max-height: 80vh;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* --- Responsive Brand Strip --- */
+@media (max-width: 768px) {
+    .strip-item {
+        padding: 0 20px;
+    }
+    .strip-divider {
+        height: 36px;
+    }
+    .brand-strip-grid {
+        gap: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-strip-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px 0;
+    }
+    .strip-divider {
+        display: none;
+    }
+    .strip-item {
+        padding: 0 8px;
+    }
+}
+
 /* --- Shadow Glow Yellow (botones especiales) --- */
 .shadow-glow-yellow {
     box-shadow: 0 8px 28px rgba(245, 176, 65, 0.45);

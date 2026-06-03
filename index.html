@@ -15,9 +15,6 @@
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" aria-hidden="true"></div>
 
-    <!-- Grain texture overlay -->
-    <div class="grain-overlay" aria-hidden="true"></div>
-
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
@@ -563,26 +560,41 @@
         }, { passive: true });
 
         // =============================================
-        // FLOATING COFFEE PARTICLES (Hero)
+        // BOKEH CÁLIDO (Luz de mañana en cocina)
         // =============================================
         const hero = document.querySelector('.hero');
         if (hero) {
-            const particlesEl = document.createElement('div');
-            particlesEl.className = 'coffee-particles';
-            hero.appendChild(particlesEl);
+            const bokehContainer = document.createElement('div');
+            bokehContainer.className = 'bokeh-container';
+            hero.appendChild(bokehContainer);
 
-            for (let i = 0; i < 18; i++) {
-                const p = document.createElement('div');
-                p.className = 'coffee-particle';
-                const size = Math.random() * 7 + 6;
-                p.style.cssText = `
-                    left: ${Math.random() * 100}%;
-                    width: ${size}px;
-                    height: ${(size * 1.45).toFixed(1)}px;
-                    animation-duration: ${(Math.random() * 14 + 12).toFixed(1)}s;
-                    animation-delay: -${(Math.random() * 14).toFixed(1)}s;
+            const bokehColors = [
+                'rgba(245, 176, 65,  VAL)',   // dorado sol
+                'rgba(229, 152, 102, VAL)',   // ámbar cálido
+                'rgba(245, 210, 140, VAL)',   // dorado claro
+                'rgba(250, 240, 215, VAL)',   // crema leche
+                'rgba(210, 145,  70, VAL)',   // café con leche
+            ];
+
+            for (let i = 0; i < 14; i++) {
+                const b = document.createElement('div');
+                b.className = 'bokeh-circle';
+                const size  = Math.random() * 160 + 80;
+                const blur  = Math.random() * 45  + 35;
+                const alpha = (Math.random() * 0.14 + 0.10).toFixed(2);
+                const color = bokehColors[Math.floor(Math.random() * bokehColors.length)]
+                                         .replace('VAL', alpha);
+                b.style.cssText = `
+                    left: ${(Math.random() * 110 - 5).toFixed(1)}%;
+                    top:  ${(Math.random() * 110 - 5).toFixed(1)}%;
+                    width:  ${size.toFixed(0)}px;
+                    height: ${size.toFixed(0)}px;
+                    background: ${color};
+                    filter: blur(${blur.toFixed(0)}px);
+                    animation-duration: ${(Math.random() * 14 + 16).toFixed(1)}s;
+                    animation-delay:   -${(Math.random() * 20).toFixed(1)}s;
                 `;
-                particlesEl.appendChild(p);
+                bokehContainer.appendChild(b);
             }
         }
 
@@ -611,30 +623,7 @@
             }
         }
 
-        // =============================================
-        // 3D TILT — HERO IMAGE
-        // =============================================
-        const galleryWrapper = document.querySelector('.gallery-wrapper');
-        const galleryImg = document.querySelector('.gallery-img');
-
-        if (galleryWrapper && galleryImg) {
-            let animFrame;
-            galleryWrapper.addEventListener('mousemove', (e) => {
-                cancelAnimationFrame(animFrame);
-                animFrame = requestAnimationFrame(() => {
-                    const rect = galleryWrapper.getBoundingClientRect();
-                    const x = ((e.clientX - rect.left) / rect.width  - 0.5) * 18;
-                    const y = ((e.clientY - rect.top)  / rect.height - 0.5) * -18;
-                    galleryImg.style.transition = 'none';
-                    galleryImg.style.transform = `perspective(900px) rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
-                });
-            });
-            galleryWrapper.addEventListener('mouseleave', () => {
-                cancelAnimationFrame(animFrame);
-                galleryImg.style.transition = 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
-                galleryImg.style.transform = 'rotate(2deg)';
-            });
-        }
+        // (3D tilt removido — imagen estática con rotación suave)
 
         // =============================================
         // INSTAGRAM CONTADOR ANIMADO

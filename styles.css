@@ -1445,8 +1445,8 @@ img {
     transform: translateY(-7px) scale(1.05) !important;
 }
 
-/* --- Floating Coffee Particles --- */
-.coffee-particles {
+/* --- Bokeh Cálido (luz mañana de cocina) --- */
+.bokeh-container {
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -1454,31 +1454,18 @@ img {
     z-index: 0;
 }
 
-.coffee-particle {
+.bokeh-circle {
     position: absolute;
-    background: var(--color-coffee);
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    opacity: 0;
-    animation: floatUp linear infinite;
+    border-radius: 50%;
+    animation: floatBokeh ease-in-out infinite;
+    will-change: transform;
 }
 
-.coffee-particle::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    right: 15%;
-    height: 1.5px;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 1px;
-    transform: translateY(-50%);
-}
-
-@keyframes floatUp {
-    0%   { transform: translateY(110vh) rotate(0deg);   opacity: 0;    }
-    5%   {                                               opacity: 0.07; }
-    90%  {                                               opacity: 0.07; }
-    100% { transform: translateY(-150px) rotate(360deg); opacity: 0;   }
+@keyframes floatBokeh {
+    0%   { transform: translateY(0px)   scale(1);    }
+    30%  { transform: translateY(-22px) scale(1.07); }
+    65%  { transform: translateY(10px)  scale(0.94); }
+    100% { transform: translateY(0px)   scale(1);    }
 }
 
 /* --- MIGAO Section: Sparkle Stars --- */
@@ -1690,8 +1677,7 @@ img {
 
 /* --- Gallery Wrapper: Perspectiva 3D --- */
 .gallery-wrapper {
-    perspective: 1200px;
-    transform-style: preserve-3d;
+    transform-style: flat;
 }
 
 /* --- Hero Tagline: Entrada animada --- */
@@ -1752,19 +1738,7 @@ img {
     transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --- Grain Texture (Film look sutil) --- */
-.grain-overlay {
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    background-size: 192px 192px;
-    opacity: 0.022;
-    pointer-events: none;
-    z-index: 9998;
-}
-
 @media (max-width: 768px) {
-    .cta-sunburst { display: none; }
-    .coffee-particles { display: none; }
-    .grain-overlay { display: none; }
+    .cta-sunburst  { display: none; }
+    .bokeh-container { display: none; }
 }

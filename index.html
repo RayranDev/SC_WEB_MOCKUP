@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sunshine Coffee - Un sueño servido en taza, directo a Bosa.">
+    <title>Sunshine Coffee | Un sueño servido en taza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo-link">
+                <img src="./assets/sunshine_coffee_logo_1780492617338.png" alt="Sunshine Coffee Logo" class="logo">
+                <span class="logo-text">Sunshine Coffee</span>
+            </a>
+            <div class="nav-links">
+                <a href="#menu" class="nav-link">Menú</a>
+                <a href="#historia" class="nav-link">Nuestra Historia</a>
+                <a href="#pedido" class="btn btn-primary btn-small">Pedir Domicilio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección 1: El Amanecer (Hero Section) -->
+    <header class="hero">
+        <div class="hero-bg">
+            <img src="./assets/sunshine_coffee_hero_1780492635363.png" alt="Sunshine Coffee Cart">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">El sol apenas está saliendo 🌅<br>Elige tu momento Sunshine.</h1>
+            <p class="hero-subtitle">Café caliente, frío o un nevado delicioso directo a tu puerta en Bosa. De manos jóvenes que le ponen corazón a cada taza.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/573000000000?text=¡Hola%20Angie%20y%20Greyssi!%20Vi%20su%20página%20web%20y%20quiero%20armar%20mi%20momento%20Sunshine%20con%20un%20café..." target="_blank" class="btn btn-primary btn-large shadow-glow">📦 Pedir Domicilio (WhatsApp)</a>
+                <a href="#menu" class="btn btn-outline btn-large">📋 Ver Menú</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección 2: Nuestra Historia -->
+    <section id="historia" class="story-section">
+        <div class="container story-container">
+            <div class="story-image-wrapper">
+                <img src="./assets/sunshine_coffee_story_1780492647991.png" alt="Angie y Greyssi preparando café" class="story-image">
+            </div>
+            <div class="story-text">
+                <h2 class="section-title">De cuidar vidas a servir sonrisas.</h2>
+                <h3 class="section-subtitle">Manos con sabor a sueños</h3>
+                <p>Somos <strong>Angie y Greyssi</strong>. Sunshine Coffee nace como un sueño servido en taza por dos jóvenes que decidieron emprender con ilusión y esfuerzo.</p>
+                <p>Greyssi —enfermera, estudiante y mujer valiente— plasma su corazón en este proyecto. No es solo un café rico; es el reflejo de un corazón que nunca deja de trabajar por lo que ama.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Especial: MIGAO -->
+    <section class="special-section">
+        <div class="container special-container">
+            <div class="special-content">
+                <span class="badge">NUEVO</span>
+                <h2 class="special-title">El "MIGAO"</h2>
+                <p class="special-desc">Chocolate caliente cremoso + galletas Ducales + almohábana + queso doble crema.</p>
+                <p class="special-question">¿Te atreves a probarlo? 🤪</p>
+                <a href="#pedido" class="btn btn-primary">¡Lo quiero!</a>
+            </div>
+            <div class="special-image-wrapper">
+                <img src="./assets/sunshine_coffee_migao_1780492660343.png" alt="Migao - Chocolate con almojábana y queso" class="special-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: El Menú Interactivo -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header center">
+                <h2 class="section-title">El Menú</h2>
+                <p class="section-subtitle">Adiós a las complicaciones. Encuentra tu antojo.</p>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-target="calientes">☕ Cafés Calientes</button>
+                <button class="menu-tab" data-target="frios">🧊 Cafés Fríos</button>
+                <button class="menu-tab" data-target="nevados">🍧 Nevados</button>
+            </div>
+
+            <div class="menu-content">
+                <!-- Calientes -->
+                <div id="calientes" class="menu-category active">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Campesino</h4>
+                            <div class="dots"></div>
+                            <span class="price">$3.000</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Café</h4>
+                            <div class="dots"></div>
+                            <span class="price">$9.000</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Mocachino</h4>
+                            <div class="dots"></div>
+                            <span class="price">$4.000</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Cappuccino</h4>
+                            <div class="dots"></div>
+                            <span class="price">$4.000</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Americano</h4>
+                            <div class="dots"></div>
+                            <span class="price">$2.500</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Café Latte</h4>
+                            <div class="dots"></div>
+                            <span class="price">$4.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fríos -->
+                <div id="frios" class="menu-category">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Spanish Latte</h4>
+                            <div class="dots"></div>
+                            <span class="price">$8.000</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Caramelo Macchiato</h4>
+                            <div class="dots"></div>
+                            <span class="price">$8.000</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Mocca Chocolate</h4>
+                            <div class="dots"></div>
+                            <span class="price">$8.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nevados -->
+                <div id="nevados" class="menu-category">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Mocca</h4>
+                            <div class="dots"></div>
+                            <span class="price">$9.000</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Baylis</h4>
+                            <div class="dots"></div>
+                            <span class="price">$10.000</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Bailys Latte</h4>
+                            <div class="dots"></div>
+                            <span class="price">$10.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Tu Momento Perfecto -->
+    <section class="moment-section">
+        <div class="container center">
+            <h2 class="section-title">Tu Momento Perfecto</h2>
+            <div class="moment-card">
+                <div class="moment-icon">🕒</div>
+                <h3 id="moment-time">Calculando la hora perfecta...</h3>
+                <p id="moment-message" class="moment-message">El café sabe mejor en cualquier momento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 5: ¡Pídelo ya! -->
+    <section id="pedido" class="cta-section">
+        <div class="container center cta-container">
+            <div class="delivery-badge">¡LLEGÓ A BOSA! ☕️🚚</div>
+            <h2 class="section-title">Arma tu momento Sunshine</h2>
+            <p class="cta-schedule"><strong>Horarios:</strong> Domicilios de 8:00 am a 2:00 pm</p>
+            <a href="https://wa.me/573000000000?text=¡Hola%20Angie%20y%20Greyssi!%20Vi%20su%20página%20web%20y%20quiero%20armar%20mi%20momento%20Sunshine%20con%20un%20café..." target="_blank" class="btn btn-whatsapp btn-massive">
+                <span class="wa-icon">📱</span> Enviar mi pedido por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container center">
+            <img src="./assets/sunshine_coffee_logo_1780492617338.png" alt="Sunshine Coffee" class="footer-logo">
+            <p>© 2026 Sunshine Coffee. Un sueño servido en taza.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Tabs Logic
+        const tabs = document.querySelectorAll('.menu-tab');
+        const categories = document.querySelectorAll('.menu-category');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and categories
+                tabs.forEach(t => t.classList.remove('active'));
+                categories.forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked tab and corresponding category
+                tab.classList.add('active');
+                const targetId = tab.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        // Dynamic Moment Logic
+        const setMomentMessage = () => {
+            const hour = new Date().getHours();
+            const timeEl = document.getElementById('moment-time');
+            const msgEl = document.getElementById('moment-message');
+
+            if (hour >= 6 && hour < 12) {
+                timeEl.innerText = "¡Buenos días!";
+                msgEl.innerText = "El secreto para arrancar el día con energía... es tu Sunshine Coffee.";
+            } else if (hour >= 12 && hour < 15) {
+                timeEl.innerText = "Después del Almuerzo";
+                msgEl.innerText = "La pausa perfecta tiene nombre: café frío con chocolate y caramelo.";
+            } else {
+                timeEl.innerText = "La Tarde";
+                msgEl.innerText = "El café de la tarde sabe mejor cuando lo disfrutas con un waffle.";
+            }
+        };
+
+        setMomentMessage();
+    </script>
+</body>
+</html>

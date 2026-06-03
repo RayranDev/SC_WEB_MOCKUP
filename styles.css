@@ -1434,6 +1434,35 @@ img {
     box-shadow: 0 14px 40px rgba(245, 176, 65, 0.65) !important;
 }
 
+/* --- Botón outline cálido (para fondos crema/claros) --- */
+.btn-outline-warm {
+    background-color: transparent;
+    border: 2px solid var(--color-coffee-light);
+    color: var(--color-coffee);
+}
+
+.btn-outline-warm:hover {
+    background-color: var(--color-coffee);
+    border-color: var(--color-coffee);
+    color: var(--color-white);
+    transform: translateY(-3px);
+}
+
+/* --- Botón "Ver carta física": estilo menú artesanal --- */
+#btn-open-menu-image {
+    border-color: var(--color-coffee);
+    color: var(--color-coffee);
+    font-style: italic;
+    letter-spacing: 0.02em;
+    gap: 8px;
+}
+
+#btn-open-menu-image:hover {
+    background-color: var(--color-coffee);
+    color: var(--color-white);
+    transform: translateY(-3px);
+}
+
 /* --- Bounce Hover Elástico --- */
 .bounce-hover {
     transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),

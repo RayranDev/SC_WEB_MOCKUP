@@ -69,7 +69,7 @@
                     <a href="https://wa.me/573022338027?text=¡Hola%20Angie%20y%20Greyssi!%20Vi%20su%20página%20web%20y%20quiero%20armar%20mi%20momento%20Sunshine%20con%20un%20café..." target="_blank" class="btn btn-primary btn-large shadow-glow-yellow bounce-hover">
                         <span>📦 Pedir por WhatsApp</span>
                     </a>
-                    <a href="#menu" class="btn btn-outline btn-large">📋 Ver Menú</a>
+                    <a href="#menu" class="btn btn-outline-warm btn-large">📋 Ver Menú</a>
                 </div>
             </div>
             <div class="hero-image-gallery reveal delay-2">
@@ -626,23 +626,23 @@
         // (3D tilt removido — imagen estática con rotación suave)
 
         // =============================================
-        // INSTAGRAM CONTADOR ANIMADO
+        // INSTAGRAM CONTADOR ANIMADO (en hover)
         // =============================================
         document.querySelectorAll('.insta-post').forEach(post => {
+            // Guardar los valores originales como data-target
             post.querySelectorAll('.insta-overlay span').forEach(span => {
                 const match = span.textContent.match(/\d+/);
                 if (match) span.dataset.target = match[0];
             });
-        });
 
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.querySelectorAll('.insta-overlay span[data-target]').forEach(span => {
+            // Animar contador cada vez que se hace hover
+            post.addEventListener('mouseenter', () => {
+                post.querySelectorAll('.insta-overlay span[data-target]').forEach(span => {
                     const target = parseInt(span.dataset.target, 10);
                     const isHeart = span.textContent.includes('❤️');
                     let current = 0;
-                    const steps = Math.ceil(1200 / 16);
+                    const duration = 900;
+                    const steps = Math.ceil(duration / 16);
                     const increment = target / steps;
                     const tick = () => {
                         current = Math.min(current + increment, target);
@@ -651,11 +651,8 @@
                     };
                     requestAnimationFrame(tick);
                 });
-                counterObserver.unobserve(entry.target);
             });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.insta-post').forEach(post => counterObserver.observe(post));
+        });
     </script>
 </body>
 </html>
